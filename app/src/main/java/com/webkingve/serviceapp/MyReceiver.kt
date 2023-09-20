@@ -10,7 +10,7 @@ class MyReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         // BOOT_COMPLETED” start Service
         if (intent.action == ACTION) {
-            Log.i("TEST", "STARTING THE SERVICE!")
+            Log.i("Handlers", "Starting receiver from boot")
             val serviceIntent = Intent(context, MyService::class.java)
             context.startService(serviceIntent)
         }
